@@ -1,0 +1,55 @@
+@font-face {
+    font-family: digitalClock;
+    src: url(alarm_clock.ttf);
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+#clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    border: 40px solid rgb(0, 0, 0);
+    border-radius: 24px;
+    
+}
+
+#front {
+    position: absolute;
+    color: white;
+    text-shadow:0 0 5px red,
+                0 0 10px red,
+                0 0 20px red,
+                0 0 30px red;
+    font-size: 220px;
+    font-family: digitalClock, Arial, Helvetica, sans-serif;
+}
+
+#back {
+    position: relative;
+    color: rgba(255, 255, 255, 0.020);
+    text-shadow:0 0 2px rgba(255, 0, 0, 0.01),
+                0 0 4px rgba(255, 0, 0, 0.01),
+                0 0 6px rgba(255, 0, 0, 0.01),
+                0 0 8px rgba(255, 0, 0, 0.01);
+    font-size: 220px;
+    font-family: digitalClock, Arial, Helvetica, sans-serif;
+}
+
+#options {
+    background-color: aliceblue;
+    top: 100%;
+    left: 100%;
+    margin-right: 50%;
+    transform: translate(50%, 1050%);
+}
