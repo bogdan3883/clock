@@ -4,8 +4,10 @@
 }
 
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(30, 30, 30);
 }
+
+
 
 #clock {
     position: absolute;
@@ -14,15 +16,30 @@ body {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 1000px;
-    height: 400px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(10, 10, 10);
-    border: 40px solid rgb(0, 0, 0);
+    background-color: rgb(20, 20, 20);
+    border: 40px solid rgb(139, 139, 139);
+    border-bottom: 80px solid rgb(139, 139, 139);
     border-radius: 24px;
     
+    
 }
+
+/* .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 700px;
+    background-color: black;
+    border: 40px solid rgb(139, 139, 139);
+    border-radius: 24px;
+} */
 
 #front {
     position: absolute;
@@ -37,7 +54,7 @@ body {
 
 #back {
     position: relative;
-    color: rgba(255, 255, 255, 0.020);
+    color: rgba(255, 255, 255, 0.030);
     text-shadow:0 0 2px rgba(255, 0, 0, 0.01),
                 0 0 4px rgba(255, 0, 0, 0.01),
                 0 0 6px rgba(255, 0, 0, 0.01),
@@ -46,10 +63,83 @@ body {
     font-family: digitalClock, Arial, Helvetica, sans-serif;
 }
 
-#options {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50vh;
+    gap: 20px;
     background-color: aliceblue;
-    top: 100%;
-    left: 100%;
-    margin-right: 50%;
-    transform: translate(50%, 1050%);
+    position: relative;
 }
+
+.buttons {
+    position: absolute;
+    bottom: -70px;
+}
+
+button {
+    height: 60px;
+    width: 90px;
+    font-size: 42px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 12px;
+}
+
+#button-stop {
+    margin: 0 10px 0 10px;
+}
+
+#button-right {
+    margin-left: 10px;
+}
+
+button:active {
+    transform: scale(0.96);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#button-play:active {
+    color: white;
+    text-shadow:0 0 5px red,
+                0 0 10px red,
+                0 0 20px red,
+                0 0 30px red;
+}
+/* 
+#button-stop {
+    height: 60px;
+    width: 90px;
+    font-size: 42px;
+    background-color: rgb(139, 139, 139);
+    border-radius: 12px;
+
+}
+#button-left:active {
+    transform: scale(0.96);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#button-play {
+    height: 60px;
+    width: 90px;
+    font-size: 42px;
+    background-color: rgb(139, 139, 139);
+    border-radius: 12px;
+}
+#button-left:active {
+    transform: scale(0.96);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#button-right {
+    height: 60px;
+    width: 90px;
+    font-size: 42px;
+    background-color: rgb(139, 139, 139);
+    border-radius: 12px;
+}
+#button-left:active {
+    transform: scale(0.96);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+} */

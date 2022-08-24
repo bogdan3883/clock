@@ -22,3 +22,18 @@ function displayTime() {
 }
 displayTime();
 
+
+let audio = document.getElementById("audio");
+let buttonPlay = document.getElementById("button-play");
+let buttonStop = document.getElementById("button-stop");
+let count = 0;
+
+function play() {
+    audio.play();
+}
+
+function stop() {
+    
+        audio.pause();
+    
+}
