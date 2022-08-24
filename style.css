@@ -83,7 +83,9 @@ button {
     width: 90px;
     font-size: 42px;
     background-color: rgb(100, 100, 100);
+    border: 2px solid black;
     border-radius: 12px;
+    box-shadow: 5px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 #button-stop {
@@ -96,15 +98,29 @@ button {
 
 button:active {
     transform: scale(0.96);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: none;
+    
 }
 
-#button-play:active {
+#button-left:active {
     color: white;
     text-shadow:0 0 5px red,
                 0 0 10px red,
                 0 0 20px red,
                 0 0 30px red;
+    box-shadow: none;
+   
+}
+
+#button-left:focus {
+    color: white;
+    text-shadow:0 0 5px red,
+                0 0 10px red,
+                0 0 20px red,
+                0 0 30px red;
+    box-shadow: none;
+    transform: scale(0.96);
+    pointer-events: none;
 }
 /* 
 #button-stop {

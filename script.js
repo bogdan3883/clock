@@ -1,4 +1,5 @@
-setInterval(displayTime, 1000);
+let myTimer = setInterval(displayTime, 1000);
+
 
 
 
@@ -7,33 +8,18 @@ function displayTime() {
 
     let hours = time.getHours();
     let minutes = time.getMinutes();
-    let seconds = time.getSeconds()
+    let seconds = time.getSeconds();
 
     if (seconds < 10) {
-        seconds = "0" + seconds
+        seconds = "0" + seconds;
     }
 
     if (minutes < 10) {
-        minutes = "0" + minutes
+        minutes = "0" + minutes;
     }
 
     let timeNow = hours + ":" + minutes + ":" + seconds;
-    document.getElementById("front").innerHTML = timeNow
+    document.getElementById("front").innerHTML = timeNow;
+ 
 }
 displayTime();
-
-
-let audio = document.getElementById("audio");
-let buttonPlay = document.getElementById("button-play");
-let buttonStop = document.getElementById("button-stop");
-let count = 0;
-
-function play() {
-    audio.play();
-}
-
-function stop() {
-    
-        audio.pause();
-    
-}
