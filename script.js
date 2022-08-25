@@ -1,6 +1,7 @@
 let myTimer = setInterval(displayTime, 1000);
 let int = null;
 
+
 function displayTime() {
     const time = new Date();
 
@@ -24,38 +25,29 @@ displayTime();
 
 
 document.getElementById('button-left').addEventListener('click', () => {
-    let x = document.getElementById("container-2");
-    let y = document.getElementById("container");
-    if(x.style.display == "none") {
-        x.style.display = "block";
-        y.style.display = "none";
+
+    let on = document.getElementById("container-2");
+    let off = document.getElementById("container");
+
+    if (on.style.display == "none") {
+        on.style.display = "block";
+        off.style.display = "none";
     } else {
-        x.style.display = "none";
-        y.style.display = "block";
+        on.style.display = "none";
+        off.style.display = "block";
     }
 })
+
 document.getElementById('button-left-2').addEventListener('click', () => {
-    let x = document.getElementById("container-2");
-let y = document.getElementById("container");
-    if(x.style.display == "block") {
-        x.style.display = "none";
-        y.style.display = "block";
+
+    let on = document.getElementById("container-2");
+    let off = document.getElementById("container");
+
+    if (on.style.display == "block") {
+        on.style.display = "none";
+        off.style.display = "block";
     }
 })
-
-
-
-// function toggleOnOff() {
-//     const x = document.getElementById("container-2");
-//     const y = document.getElementById("container");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//         y.style.display = "none";
-//     } else {
-//         x.style.display = "none";
-//         y.style.display = "block";
-//     }
-// }
 
 document.getElementById('button-play-2').addEventListener('click', () => {
     if (int !== null) {
@@ -75,22 +67,6 @@ document.getElementById('button-right-2').addEventListener('click', () => {
     seconds = 0;
     document.getElementById("front-2").innerHTML = "00:00:00";
 })
-
-// function startSW() {
-//     start = setInterval(stopwatch, 1000);
-// }
-
-// function stopSW() {
-//     clearInterval(start);
-// }
-
-// function reset(){
-//     clearInterval(start);
-//     hours = 0;
-//     minutes = 0;
-//     seconds = 0;
-//     document.getElementById("front-2").innerHTML = "00:00:00";
-// }
 
 let hours = 0;
 let minutes = 0;
