@@ -53,7 +53,7 @@ document.getElementById('button-play-2').addEventListener('click', () => {
     if (verify !== null) {
         clearInterval(verify);
     }
-    verify = setInterval(stopwatch, 1000);
+    verify = setInterval(stopwatch, 10);
 })
 
 document.getElementById('button-stop-2').addEventListener('click', () => {
@@ -68,25 +68,31 @@ document.getElementById('button-right-2').addEventListener('click', () => {
     document.getElementById("front-2").innerHTML = "00:00:00";
 })
 
-let hours = 0;
 let minutes = 0;
 let seconds = 0;
-let displayHours = 0;
+let miliseconds = 0;
 let displayMinutes = 0;
 let displaySeconds = 0;
+let displayMiliseconds = 0;
 
 function stopwatch() {
 
-    seconds++;
+    miliseconds++;
 
-    if(seconds == 60){
-        seconds = 0;
-        minutes++;
+    if(miliseconds == 99){
+        miliseconds = 0;
+        seconds++;
 
-        if(minutes == 60) {
-            minutes = 0;
-            hours++;
+        if(seconds == 60) {
+            seconds = 0;
+            minutes++;
         }
+    }
+
+    if (miliseconds < 10) {
+        displayMiliseconds = "0" + miliseconds;
+    } else {
+        displayMiliseconds = miliseconds;
     }
 
     if (seconds < 10) {
@@ -101,12 +107,6 @@ function stopwatch() {
         displayMinutes = minutes;
     }
 
-    if (hours < 10) {
-        displayHours = "0" + hours;
-    } else {
-        displayHours = hours;
-    }
-
-    let stopwatchNow = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+    let stopwatchNow = displayMinutes + ":" + displaySeconds + ":" + displayMiliseconds;
     document.getElementById("front-2").innerHTML = stopwatchNow;
 }
