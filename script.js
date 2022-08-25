@@ -1,7 +1,5 @@
 let myTimer = setInterval(displayTime, 1000);
-
-
-
+let int = null;
 
 function displayTime() {
     const time = new Date();
@@ -20,45 +18,88 @@ function displayTime() {
 
     let timeNow = hours + ":" + minutes + ":" + seconds;
     document.getElementById("front").innerHTML = timeNow;
-
 }
 displayTime();
 
 
-    function myFunction() {
-    var x = document.getElementById("container-2");
+
+document.getElementById('button-left').addEventListener('click', () => {
+    let x = document.getElementById("container-2");
     let y = document.getElementById("container");
-    if (x.style.display === "none") {
+    if(x.style.display == "none") {
         x.style.display = "block";
         y.style.display = "none";
     } else {
         x.style.display = "none";
         y.style.display = "block";
     }
-}
+})
+document.getElementById('button-left-2').addEventListener('click', () => {
+    let x = document.getElementById("container-2");
+let y = document.getElementById("container");
+    if(x.style.display == "block") {
+        x.style.display = "none";
+        y.style.display = "block";
+    }
+})
 
-function startSW() {
-    clearInterval(stopwatch);
-    start = setInterval(stopwatch, 1000);
-}
 
-function stopSW() {
-    clearInterval(start);
-}
 
-function reset(){
-    clearInterval(stopwatch);
+// function toggleOnOff() {
+//     const x = document.getElementById("container-2");
+//     const y = document.getElementById("container");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//         y.style.display = "none";
+//     } else {
+//         x.style.display = "none";
+//         y.style.display = "block";
+//     }
+// }
+
+document.getElementById('button-play-2').addEventListener('click', () => {
+    if (int !== null) {
+        clearInterval(int);
+    }
+    int = setInterval(stopwatch, 1000);
+})
+
+document.getElementById('button-stop-2').addEventListener('click', () => {
+    clearInterval(int);
+})
+
+document.getElementById('button-right-2').addEventListener('click', () => {
+    clearInterval(int);
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
     document.getElementById("front-2").innerHTML = "00:00:00";
-}
+})
 
+// function startSW() {
+//     start = setInterval(stopwatch, 1000);
+// }
 
-    function stopwatch() {
-    let hours = 0;
-    let minutes = 0;
-    let seconds = 0;
-    let displayHours = 0;
-    let displayMinutes = 0;
-    let displaySeconds = 0;
+// function stopSW() {
+//     clearInterval(start);
+// }
+
+// function reset(){
+//     clearInterval(start);
+//     hours = 0;
+//     minutes = 0;
+//     seconds = 0;
+//     document.getElementById("front-2").innerHTML = "00:00:00";
+// }
+
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+let displayHours = 0;
+let displayMinutes = 0;
+let displaySeconds = 0;
+
+function stopwatch() {
 
     seconds++;
 
@@ -72,19 +113,19 @@ function reset(){
         }
     }
 
-    if (seconds < 10){
+    if (seconds < 10) {
         displaySeconds = "0" + seconds;
     } else {
         displaySeconds = seconds;
     }
 
-    if (minutes < 10){
+    if (minutes < 10) {
         displayMinutes = "0" + minutes;
     } else {
         displayMinutes = minutes;
     }
 
-    if (hours < 10){
+    if (hours < 10) {
         displayHours = "0" + hours;
     } else {
         displayHours = hours;
