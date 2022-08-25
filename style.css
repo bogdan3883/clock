@@ -8,7 +8,6 @@ body {
 }
 
 
-
 #clock {
     position: absolute;
     top: 50%;
@@ -24,22 +23,8 @@ body {
     border: 40px solid rgb(139, 139, 139);
     border-bottom: 80px solid rgb(139, 139, 139);
     border-radius: 24px;
-    
-    
 }
 
-/* .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 700px;
-    background-color: black;
-    border: 40px solid rgb(139, 139, 139);
-    border-radius: 24px;
-} */
 
 #front {
     position: absolute;
@@ -99,7 +84,6 @@ button {
 button:active {
     transform: scale(0.96);
     box-shadow: none;
-    
 }
 
 #button-left:active {
@@ -109,7 +93,6 @@ button:active {
                 0 0 20px red,
                 0 0 30px red;
     box-shadow: none;
-   
 }
 
 #button-left:focus {
@@ -120,11 +103,11 @@ button:active {
                 0 0 30px red;
     box-shadow: none;
     transform: scale(0.96);
-    
 }
 
 
 
+/* -------------------------------------------------------------------------------- */
 
 
 
@@ -218,7 +201,6 @@ button:active {
     border: 2px solid black;
     border-radius: 12px;
     box-shadow: 5px 2px 22px 1px rgba(0, 0, 0, 0.24);
-    
 }
 
 #button-right-2 {
@@ -235,12 +217,10 @@ button:active {
 button:active {
     transform: scale(0.96);
     box-shadow: none;
-    
 }
 
 #button-left-2:active {
     box-shadow: none;
-   
 }
 
 #button-left-2:focus {
@@ -251,44 +231,4 @@ button:active {
                 0 0 30px red;
     box-shadow: none;
     transform: scale(0.96);
-    
 }
-
-
-/* 
-#button-stop {
-    height: 60px;
-    width: 90px;
-    font-size: 42px;
-    background-color: rgb(139, 139, 139);
-    border-radius: 12px;
-
-}
-#button-left:active {
-    transform: scale(0.96);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
-#button-play {
-    height: 60px;
-    width: 90px;
-    font-size: 42px;
-    background-color: rgb(139, 139, 139);
-    border-radius: 12px;
-}
-#button-left:active {
-    transform: scale(0.96);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
-#button-right {
-    height: 60px;
-    width: 90px;
-    font-size: 42px;
-    background-color: rgb(139, 139, 139);
-    border-radius: 12px;
-}
-#button-left:active {
-    transform: scale(0.96);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-} */

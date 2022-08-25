@@ -20,25 +20,39 @@ function displayTime() {
 
     let timeNow = hours + ":" + minutes + ":" + seconds;
     document.getElementById("front").innerHTML = timeNow;
- 
+
 }
 displayTime();
 
 
-function myFunction() {
+    function myFunction() {
     var x = document.getElementById("container-2");
     let y = document.getElementById("container");
     if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none";
+        x.style.display = "block";
+        y.style.display = "none";
     } else {
-      x.style.display = "none";
-      y.style.display = "block";
+        x.style.display = "none";
+        y.style.display = "block";
     }
-  }
+}
+
+function startSW() {
+    clearInterval(stopwatch);
+    start = setInterval(stopwatch, 1000);
+}
+
+function stopSW() {
+    clearInterval(start);
+}
+
+function reset(){
+    clearInterval(stopwatch);
+    document.getElementById("front-2").innerHTML = "00:00:00";
+}
 
 
-  function stopwatch() {
+    function stopwatch() {
     let hours = 0;
     let minutes = 0;
     let seconds = 0;
@@ -48,11 +62,11 @@ function myFunction() {
 
     seconds++;
 
-    if(seconds / 60 == 1){
-        seconds = "00";
+    if(seconds == 60){
+        seconds = 0;
         minutes++;
 
-        if(minutes / 60 == 1) {
+        if(minutes == 60) {
             minutes = 0;
             hours++;
         }
@@ -65,9 +79,9 @@ function myFunction() {
     }
 
     if (minutes < 10){
-        displayMinutes = "0" +minutes;
+        displayMinutes = "0" + minutes;
     } else {
-        displayMinutes =minutes;
+        displayMinutes = minutes;
     }
 
     if (hours < 10){
@@ -75,7 +89,7 @@ function myFunction() {
     } else {
         displayHours = hours;
     }
-    document.getElementById("front-2").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
-    
-  }
-  window.setInterval(stopwatch, 1000);
+
+    let stopwatchNow = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+    document.getElementById("front-2").innerHTML = stopwatchNow;
+}
