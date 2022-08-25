@@ -83,28 +83,9 @@ button {
 }
 
 button:active {
-    transform: scale(0.96);
+    transform: scale(0.95);
     box-shadow: none;
 }
-
-/* #button-left:active {
-    color: white;
-    text-shadow:0 0 5px red,
-                0 0 10px red,
-                0 0 20px red,
-                0 0 30px red;
-    box-shadow: none;
-}
-
-#button-left:focus {
-    color: white;
-    text-shadow:0 0 5px red,
-                0 0 10px red,
-                0 0 20px red,
-                0 0 30px red;
-    box-shadow: none;
-    transform: scale(0.96);
-} */
 
 
 
@@ -214,17 +195,3 @@ button:active {
     box-shadow: 5px 2px 22px 1px rgba(0, 0, 0, 0.24);
     margin-left: 10px;
 }
-
-/* #button-left-2:active {
-    box-shadow: none;
-}
-
-#button-left-2:focus {
-    color: white;
-    text-shadow:0 0 5px red,
-                0 0 10px red,
-                0 0 20px red,
-                0 0 30px red;
-    box-shadow: none;
-    transform: scale(0.96);
-} */
