@@ -1,5 +1,5 @@
 let myTimer = setInterval(displayTime, 1000);
-let int = null;
+let verify = null;
 
 
 function displayTime() {
@@ -50,18 +50,18 @@ document.getElementById('button-left-2').addEventListener('click', () => {
 })
 
 document.getElementById('button-play-2').addEventListener('click', () => {
-    if (int !== null) {
-        clearInterval(int);
+    if (verify !== null) {
+        clearInterval(verify);
     }
-    int = setInterval(stopwatch, 1000);
+    verify = setInterval(stopwatch, 1000);
 })
 
 document.getElementById('button-stop-2').addEventListener('click', () => {
-    clearInterval(int);
+    clearInterval(verify);
 })
 
 document.getElementById('button-right-2').addEventListener('click', () => {
-    clearInterval(int);
+    clearInterval(verify);
     hours = 0;
     minutes = 0;
     seconds = 0;
